@@ -1,0 +1,11 @@
+<div class="row" *ngFor="let data of lists; index as i;">
+  <div class="col-sm-4" style="margin-top: 1%;">
+                <input type="text"  type="text" [value]="data.declare" class="form-control" placeholder="Name" (change)="listChange(i,$event.target.value)"
+                ngModel [ngModelOptions]="{standalone: true}">
+        </div>
+  <div class="col-sm-2">
+            <button type="button" class="btn btn-primary" style="margin-top: 10%;" (click)="addbutton()" *ngIf="i==0">Add</button>
+            <button type="button" class="btn btn-danger" style="margin-top: 10%;" (click)="deletebutton(i)" *ngIf="i!=0">Delete</button>
+        </div>
+    </div>
+  
